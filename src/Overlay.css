@@ -1,8 +1,8 @@
 
 
 .overlay {
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position:Absolute;
     z-index: 1;
     top: 0;
@@ -35,6 +35,12 @@
     display: block;
     transition: 0.3s;
 }
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
 
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
@@ -45,9 +51,17 @@
     top: 20px;
     right: 45px;
     font-size: 60px;
+    cursor:"pointer" !important
   }
+  .burger-overlay {
+  cursor:"pointer";
 
-
+  }
+  #navi {
+      position:fixed !important;
+      width:100%;
+      color: red;
+  }
 
 
 @media screen and (max-height: 450px) {
@@ -76,4 +90,7 @@
   font-size: 50px;
   color: white;
   text-align: center;
+}
+.burger-overlay {
+cursor:"pointer"
 }

@@ -4,14 +4,14 @@ import Fade from 'react-reveal/Fade';
 
 
 
-export default class Test extends React.Component {
+export default class Test extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
           show : false,
           style : {
-              width : '100%',
+              height : '100%',
           }
       };
       this.openNav = this.openNav.bind(this);
@@ -20,15 +20,35 @@ export default class Test extends React.Component {
 
   componentDidMount() {
       document.addEventListener("click", this.closeNav);
+      window.addEventListener('scroll', this.listenToScroll);
       this.setState({ show: true });
   }
 
   componentWillUnmount() {
       document.removeEventListener("click", this.closeNav);
+      window.removeEventListener('scroll', this.listenToScroll)
   }
 
+  listenToScroll = () => {
+  const winScroll =
+    document.body.scrollTop || document.documentElement.scrollTop
+
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight
+
+  const scrolled = winScroll / height
+
+  this.setState({
+    theposition: scrolled,
+  })
+  if ((this.state.thepostion:scrolled)){
+    console.log('hey');
+  }
+}
+
   openNav() {
-      const style = { width :" 100%"};
+      const style = { height : " 100%"};
       this.setState({ style });
       document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       document.addEventListener("click", this.closeNav);
@@ -39,10 +59,10 @@ export default class Test extends React.Component {
 
   closeNav() {
       document.removeEventListener("click", this.closeNav);
-      const style = { width : 0 };
+      const style = { height : 0 };
       this.setState({ style });
       this.setState({ show: false});
-      document.body.style.backgroundColor = "#F3F3F3";
+
 
 
 
@@ -52,7 +72,6 @@ export default class Test extends React.Component {
       return (
         <div id='wrapper'>
         <div>
-        <span style={{fontSize:30,cursor:"pointer"}} onClick={this.openNav}>&#9776; open</span>
           <div
               ref       = "snav"
               className = "overlay"
@@ -70,19 +89,22 @@ export default class Test extends React.Component {
                   </div>
                 </div>
                   <a
-
+                      style={{cursor:"pointer"}}
                       className = "closebtn"
                       onClick   = {this.closeNav}
                   >
                       ×
                   </a>
                 <div className = "list-group">
-                    {/*your form component goes here */}
-                    {this.props.children}
+
                   </div>
                 </div>
             </div>
             </div>
+            <nav class="navbar navbar-expand-lg navbar-light" id="navi">
+
+              <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
+            </nav>
 
             </div>
         );
