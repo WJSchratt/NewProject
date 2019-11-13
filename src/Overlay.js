@@ -10,62 +10,79 @@ export default class Test extends Component {
       super(props);
       this.state = {
           show : false,
+          show1: false,
           style : {
               height : '100%',
+
           }
       };
       this.openNav = this.openNav.bind(this);
       this.closeNav = this.closeNav.bind(this);
+      this.handleClick = this.handleClick.bind(this);
+      this.reveal = this.reveal.bind(this);
   }
 
   componentDidMount() {
       document.addEventListener("click", this.closeNav);
-      window.addEventListener('scroll', this.listenToScroll);
-      this.setState({ show: true });
+      setTimeout(
+        function() {
+          this.setState({ show: true})
   }
+  .bind(this),
+  1000
+  );
+
+  setTimeout(
+    function() {
+      this.setState({ show1: true})
+}
+.bind(this),
+4000
+);
+}
 
   componentWillUnmount() {
       document.removeEventListener("click", this.closeNav);
-      window.removeEventListener('scroll', this.listenToScroll)
+
   }
 
-  listenToScroll = () => {
-  const winScroll =
-    document.body.scrollTop || document.documentElement.scrollTop
-
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight
-
-  const scrolled = winScroll / height
-
-  this.setState({
-    theposition: scrolled,
-  })
-  if ((this.state.thepostion:scrolled)){
-    console.log('hey');
-  }
-}
 
   openNav() {
-      const style = { height : " 100%"};
+      const style = { height : " 100%",
+                      };
       this.setState({ style });
       document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       document.addEventListener("click", this.closeNav);
-      this.setState({ show: true });
+      setTimeout(
+        function() {
+        this.setState({ show: true})
+        this.setState({ show1: true})
+  }
+  .bind(this),
+  1000
+);
   }
 
+reveal(){
+  this.setState({ show: true});
+}
 
 
   closeNav() {
       document.removeEventListener("click", this.closeNav);
-      const style = { height : 0 };
+      const style = { height : 0,
+                       };
       this.setState({ style });
-      this.setState({ show: false});
-
-
-
-
+      setTimeout(
+        function() {
+        this.setState({ show: false})
+        this.setState({ show1: false})
+  }
+  .bind(this),
+  0
+);}
+  handleClick() {
+    this.setState({ show: !this.state.show });
   }
 
   render() {
@@ -80,12 +97,14 @@ export default class Test extends Component {
               <div className = "sidenav-container">
                 <div className = "overlay-content">
                   <div className = "text-center">
-                  <Fade bottom opposite when={this.state.show} >
-                    <h1>Welcome,</h1>
-                    <h2>I am Walter John Schratt</h2>
-                    <a href="google.com">Example</a>
-                    <a href="wow">Example</a>
-                  </Fade>
+                  <div>
+                    <Fade top opposite collapse when={this.state.show}>
+                      <h1>Hello My Name is Walter Schratt</h1>
+                    </Fade>
+                    <Fade top opposite collapse when={this.state.show1}>
+                      <h1>I am a Web-Developer</h1>
+                    </Fade>
+                    </div>
                   </div>
                 </div>
                   <a
@@ -102,8 +121,7 @@ export default class Test extends Component {
             </div>
             </div>
             <nav class="navbar navbar-expand-lg navbar-light" id="navi">
-
-              <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
+            <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
             </nav>
 
             </div>
