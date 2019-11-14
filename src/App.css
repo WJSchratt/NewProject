@@ -4,12 +4,13 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(#D3CCE3,#E9E4F0);
+  font-family: 'Righteous', cursive;
+
 }
 
 .page1{
   height:100vh;
-  background-image: linear-gradient(to right top, #052837, #065660, #32877c, #77b98b, #cee797);
+  background-image: white !important  ;
 }
 
 

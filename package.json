@@ -11,7 +11,8 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "3.2.0",
     "react-scroll-parallax": "^2.2.0",
-    "react-scrollable-anchor": "^0.6.1"
+    "react-scrollable-anchor": "^0.6.1",
+    "time-events-manager": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

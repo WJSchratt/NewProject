@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({ windowWith: window.innerWidth })
     if (this.state.windowWith < 1100) {
       this.setState({device:"phone"})
-      
+
     }
     else{
       this.setState({device:"Desktop"})
@@ -65,7 +65,6 @@ render() {
       onScroll={this.onScroll}>
     <Overlay/>
     <PageOne/>
-
 <h1>Your view width is {this.state.windowWith} you are probably on a {this.state.device} {this.state.position}</h1>
 <h1>hello</h1>
 <h1>hello</h1>
@@ -73,7 +72,6 @@ render() {
 <h1>hello</h1>
 <h1>hello</h1>
 <h1>hello</h1>
-
 <h1>hello</h1>
 <h1>hello</h1>
 <h1>hello</h1><h1>hello</h1>

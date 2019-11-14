@@ -7,28 +7,31 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.5);
     overflow-x: hidden;
+    opacity:0.98;
     transition: 1s;
-    background: #ed4264; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ed4264, #ffedbc); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ed4264, #ffedbc);
+    background: black; /* fallback for old browsers */
     background-size:contain;
     background-position:top;
     background: cover;
 
 }
 
+p {
+  font-size: 5vh !important;
+  color: white !important;
+}
+
+
 .overlay-content {
   position: fixed;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px !important;
+  font-size: 30px !important;
   text-align: center;
   margin-top: ;
-  color: black !important;
+  color: white !important;
 }
 
 .overlay a {
