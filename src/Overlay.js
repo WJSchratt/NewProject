@@ -55,8 +55,7 @@ export default class Test extends Component {
       document.addEventListener("click", this.closeNav);
       setTimeout(
         function() {
-        this.setState({ show: true})
-        this.setState({ show1: true})
+
   }
   .bind(this),
   1000
@@ -99,10 +98,10 @@ reveal(){
                   <div className = "text-center">
                   <div>
                     <Fade top opposite collapse when={this.state.show}>
-                      <h1>Hello My Name is Walter Schratt</h1>
+                      <p>Hello My Name is Walter Schratt</p>
                     </Fade>
                     <Fade top opposite collapse when={this.state.show1}>
-                      <h1>I am a Web-Developer</h1>
+                      <p>I am a Web-Developer</p>
                     </Fade>
                     </div>
                   </div>
