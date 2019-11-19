@@ -14,9 +14,15 @@
     background-size:contain;
     background-position:top;
     background: cover;
+    overflow:visible;
 
 }
-
+.center {
+  text-align: center;
+}
+h1 {
+  font-size: 5%;
+}
 p {
   font-size: 5vh !important;
   color: white !important;
@@ -25,6 +31,12 @@ p {
 .projects {
   border: solid;
   border-color: white;
+  opacity:0.5;
+}
+.projects:hover{
+  border-color: grey;
+  opacity:1;
+  transition: 1s;
 }
 .overlay-content {
   position: fixed;
@@ -91,11 +103,9 @@ p {
 
 .short {
   margin-top: 2%;
-  font-size: 2vw;
   text-align: center;
   font-family: 'Gugi', cursive;
   color:black;
-  height:15vw;
 }
 .main {
   font-family: 'Gugi', cursive;

@@ -6,6 +6,8 @@ import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Project2 from "./pics/Screen Shot 2019-11-18 at 3.09.32 PM.png"
+import Project3 from "./pics/Screen Shot 2019-11-18 at 3.10.53 PM.png"
 
 
 
@@ -165,53 +167,88 @@ closeNav() {
                 <div className = "overlay-content">
                   <div className = "text-center">
                   <Container>
+                  <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show}>
                         <p>Hello My Name is Walter Schratt</p>
                       </Fade>
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show1}>
                         <p>I am a </p>
                       </Fade>
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show2}>
                         <p>Web-Developer</p>
                       </Fade>
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show3}>
                         <p>Front-End Engineer</p>
                       </Fade>
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show4}>
                         <p>Ux designer</p>
                       </Fade>
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show5}>
                         <p>React.js specialist</p>
                       </Fade>
                     </Col>
+                    </Row>
+                  
                       <Fade top opposite collapse when={this.state.show6}>
                         <p>A guy who likes to code</p>
+                      </Fade>
+
+                      <Fade bottom opposite collapse when={this.state.show7}>
+                          <h1 className="center">Projects</h1>
                       </Fade>
                         <Row>
                           <Col>
                             <Fade bottom opposite collapse when={this.state.show7}>
-                              <h1>Music Player SPA</h1>
-                              <Image className="projects" src={Project1}fluid />
+                              <a href="#example" >
+                              <h1>Music Player</h1>
+                              <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
+                              </a>
                             </Fade>
                           </Col>
-                          <Col>2 of 2</Col>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <a href="#example" >
+                              <h1>Chat-App
+                              </h1>
+                              <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
+                              </a>
+                            </Fade>
+                          </Col>
+                          <Col><Fade bottom opposite collapse when={this.state.show7}>
+                            <a href="#example" >
+                            <h1>Wesbite</h1>
+                            <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
+                            </a>
+                          </Fade>
+                          </Col>
                         </Row>
                       </Container>
 
 
                   </div>
                 </div>
+                <Fade top opposite collapse when={this.state.show}>
                   <a
                       style={{cursor:"pointer"}}
                       className = "closebtn"
@@ -219,6 +256,7 @@ closeNav() {
                   >
                       ×
                   </a>
+                  </Fade>
                 <div className = "list-group">
 
                   </div>
