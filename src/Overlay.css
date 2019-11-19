@@ -14,7 +14,7 @@
     background-size:contain;
     background-position:top;
     background: cover;
-    overflow:hidden !important;
+    overflow-y:hidden !important;
 
 }
 .center {
@@ -27,11 +27,16 @@ p {
   font-size: 5vh !important;
   color: white !important;
 }
-
+.proj {
+  position: !important;
+  color: grey;
+  font-size: 2vw!important;
+}
 .projects {
   border: solid;
   border-color: white;
   opacity:0.5;
+  width:30vw;
 }
 .projects:hover{
   border-color: grey;
@@ -119,4 +124,13 @@ p {
 }
 .burger-overlay {
 cursor:"pointer"
+}
+
+
+@media only screen and (max-width: 1026px){
+
+.overlay-content {
+  display:none;
+}
+
 }

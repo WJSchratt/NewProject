@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Project2 from "./pics/Screen Shot 2019-11-18 at 3.09.32 PM.png"
 import Project3 from "./pics/Screen Shot 2019-11-18 at 3.10.53 PM.png"
-
+import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 
 
 export default class Test extends Component {
@@ -118,7 +118,8 @@ this.timer.push(
       10300
   ));
 
-setTimeout(
+this.timer.push(
+  setTimeout(
         function() {
         this.setState({ show:false,
                         show6:false,})
@@ -126,7 +127,8 @@ setTimeout(
 .bind(this),
 15000
 
-);
+));
+this.timer.push(
 setTimeout(
         function() {
         this.setState({ show:false,
@@ -135,7 +137,7 @@ setTimeout(
 }
 .bind(this),
 16000
-);
+));
   }
 
 openNav() {
@@ -143,7 +145,13 @@ openNav() {
     this.setState({ style });
     document.addEventListener("click", this.closeNav);
     this.setState({ show1: false,
-                    show: false, })
+                    show: false,
+                    show2: false,
+                    show3: false,
+                    show4: false,
+                    show5: false,
+                    show6: false,
+                    show7: true,})
 
 
   }
@@ -159,6 +167,7 @@ closeNav() {
     this.setState({ style,
                     show:false,
                     show6:false,
+                    show7:false,
                     closeNav: !this.state.closeNav,});
     this.timer.forEach(element => clearTimeout(element))
 }
@@ -179,18 +188,18 @@ closeNav() {
                   <div className = "text-center">
                   <Container>
                   <Row>
-                    <Col>
-                      <Fade top opposite collapse when={this.state.show}>
-                        <p>Hello My Name is Walter Schratt</p>
-                      </Fade>
-                    </Col>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show}>
+                          <p>Hello My Name is Walter Schratt</p>
+                        </Fade>
+                      </Col>
                     </Row>
                     <Row>
-                    <Col>
-                      <Fade top opposite collapse when={this.state.show1}>
-                        <p>I am a </p>
-                      </Fade>
-                    </Col>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show1}>
+                          <p>I am a </p>
+                        </Fade>
+                      </Col>
                     </Row>
                     <Row>
                     <Col>
@@ -200,63 +209,72 @@ closeNav() {
                     </Col>
                     </Row>
                     <Row>
-                    <Col>
-                      <Fade top opposite collapse when={this.state.show3}>
-                        <p>Front-End Engineer</p>
-                      </Fade>
-                    </Col>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show3}>
+                          <p>Front-End Engineer</p>
+                        </Fade>
+                      </Col>
                     </Row>
                     <Row>
-                    <Col>
-                      <Fade top opposite collapse when={this.state.show4}>
-                        <p>Ux designer</p>
-                      </Fade>
-                    </Col>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show4}>
+                          <p>Ux designer</p>
+                        </Fade>
+                      </Col>
                     </Row>
-
-                    <Col>
-                      <Fade top opposite collapse when={this.state.show5}>
-                        <p>React.js specialist</p>
-                      </Fade>
-                    </Col>
-
-                      <Fade top opposite collapse when={this.state.show6}>
-                        <p>Someone who loves to code</p>
-                      </Fade>
-                          <Fade bottom opposite collapse when={this.state.show7}>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show5}>
+                          <p>React.js specialist</p>
+                        </Fade>
+                      </Col>
+                      <Col>
+                        <Fade top opposite collapse when={this.state.show6}>
+                          <p>Someone who loves to code</p>
+                        </Fade>
+                      </Col>
+                    <div className="proj">
+                        <Fade bottom opposite collapse when={this.state.show7}>
                             <h1 className="center">Projects</h1>
-                          </Fade>
-                        <Row>
-                          <Col>
-                            <Fade bottom opposite collapse when={this.state.show7}>
-                              <a href="#example" >
-                              <h1>Music Player</h1>
-                              <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
-                              </a>
-                            </Fade>
-                          </Col>
-                          <Col>
-                            <Fade bottom opposite collapse when={this.state.show7}>
-                              <a href="#example" >
-                              <h1>Chat-App
-                              </h1>
-                              <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
-                              </a>
-                            </Fade>
-                          </Col>
-                          <Col><Fade bottom opposite collapse when={this.state.show7}>
+                        </Fade>
+                    <Row>
+                      <Col>
+                        <Fade bottom opposite collapse when={this.state.show7}>
+                          <a href="#example" >
+                            <h1>Music Player</h1>
+                            <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
+                          </a>
+                        </Fade>
+                      </Col>
+                      <Col>
+                        <Fade bottom opposite collapse when={this.state.show7}>
+                          <a href="#example" >
+                            <h1>Chat-Application
+                            </h1>
+                            <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
+                          </a>
+                        </Fade>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col><Fade bottom opposite collapse when={this.state.show7}>
                             <a href="#example" >
-                            <h1>Wesbite</h1>
+                            <h1>Website</h1>
                             <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
                             </a>
                           </Fade>
-                          </Col>
-                        </Row>
-                      </Container>
-
-
-                  </div>
+                        </Col>
+                        <Col><Fade bottom opposite collapse when={this.state.show7}>
+                            <a href="#example" >
+                            <h1>Demo for client</h1>
+                            <Image alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
+                            </a>
+                          </Fade>
+                        </Col>
+                      </Row>
+                    </div>
+                  </Container>
                 </div>
+              </div>
                 <Fade top opposite collapse when={this.state.show}>
                   <a
                       style={{cursor:"pointer"}}
