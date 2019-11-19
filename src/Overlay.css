@@ -22,7 +22,10 @@ p {
   color: white !important;
 }
 
-
+.projects {
+  border: solid;
+  border-color: white;
+}
 .overlay-content {
   position: fixed;
   top: 40%;

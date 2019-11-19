@@ -5,6 +5,7 @@ import Overlay from "./Overlay.js"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import PageOne from "./PageOne.js"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {

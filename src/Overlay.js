@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import "./Overlay.css";
 import Fade from 'react-reveal/Fade';
+import Project1 from "./pics/Screen Shot 2019-11-18 at 3.08.40 PM.png";
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 
 
 
@@ -9,6 +14,7 @@ export default class Test extends Component {
   constructor(props) {
       super(props);
       this.state = {
+          show7: false,
           show6: false,
           show5: false,
           show4: false,
@@ -109,7 +115,15 @@ this.timer.push(
       .bind(this),
       12000
   ));
-  }
+
+setTimeout(
+        function() {
+        this.setState({ show7: true,})
+}
+.bind(this),
+15000
+
+);  }
 
 openNav() {
     const style = { height : " 100%",};
@@ -150,29 +164,52 @@ closeNav() {
               <div className = "sidenav-container">
                 <div className = "overlay-content">
                   <div className = "text-center">
-                  <div>
+                  <Container>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show}>
                         <p>Hello My Name is Walter Schratt</p>
                       </Fade>
+                    </Col>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show1}>
                         <p>I am a </p>
                       </Fade>
+                    </Col>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show2}>
                         <p>Web-Developer</p>
                       </Fade>
+                    </Col>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show3}>
                         <p>Front-End Engineer</p>
                       </Fade>
+                    </Col>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show4}>
                         <p>Ux designer</p>
                       </Fade>
+                    </Col>
+                    <Col>
                       <Fade top opposite collapse when={this.state.show5}>
                         <p>React.js specialist</p>
                       </Fade>
+                    </Col>
                       <Fade top opposite collapse when={this.state.show6}>
                         <p>A guy who likes to code</p>
                       </Fade>
-                    </div>
+                        <Row>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <h1>Music Player SPA</h1>
+                              <Image className="projects" src={Project1}fluid />
+                            </Fade>
+                          </Col>
+                          <Col>2 of 2</Col>
+                        </Row>
+                      </Container>
+
+
                   </div>
                 </div>
                   <a
