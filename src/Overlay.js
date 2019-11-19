@@ -54,7 +54,7 @@ setTimeout(
       this.setState({ show: true})
   }
       .bind(this),
-      1200
+      1300
   ))
 this.timer.push(
 setTimeout(
@@ -71,7 +71,7 @@ this.timer.push(
       this.setState({show3: true})
   }
       .bind(this),
-      5000
+      5300
   ))
 this.timer.push(
   setTimeout(
@@ -79,7 +79,7 @@ this.timer.push(
       this.setState({ show4: true,})
   }
       .bind(this),
-      6000
+      6300
   )) ;
 this.timer.push(
   setTimeout(
@@ -87,7 +87,7 @@ this.timer.push(
       this.setState({ show5: true,})
   }
       .bind(this),
-      7000
+      7300
   )) ;
   this.timer.push(
   setTimeout(
@@ -95,7 +95,7 @@ this.timer.push(
       this.setState({ show5: true,})
   }
       .bind(this),
-      8000
+      8300
   )) ;
   this.timer.push(
   setTimeout(
@@ -103,7 +103,7 @@ this.timer.push(
       this.setState({ show6: true,})
   }
       .bind(this),
-      9000
+      8000
   )) ;
 this.timer.push(
   setTimeout(
@@ -115,17 +115,28 @@ this.timer.push(
                       show5: false,})
   }
       .bind(this),
-      12000
+      10300
   ));
 
 setTimeout(
         function() {
-        this.setState({ show7: true,})
+        this.setState({ show:false,
+                        show6:false,})
 }
 .bind(this),
 15000
 
-);  }
+);
+setTimeout(
+        function() {
+        this.setState({ show:false,
+                        show6:false,
+                        show7:true,})
+}
+.bind(this),
+16000
+);
+  }
 
 openNav() {
     const style = { height : " 100%",};
@@ -202,21 +213,19 @@ closeNav() {
                       </Fade>
                     </Col>
                     </Row>
-                    <Row>
+
                     <Col>
                       <Fade top opposite collapse when={this.state.show5}>
                         <p>React.js specialist</p>
                       </Fade>
                     </Col>
-                    </Row>
-                  
-                      <Fade top opposite collapse when={this.state.show6}>
-                        <p>A guy who likes to code</p>
-                      </Fade>
 
-                      <Fade bottom opposite collapse when={this.state.show7}>
-                          <h1 className="center">Projects</h1>
+                      <Fade top opposite collapse when={this.state.show6}>
+                        <p>Someone who loves to code</p>
                       </Fade>
+                          <Fade bottom opposite collapse when={this.state.show7}>
+                            <h1 className="center">Projects</h1>
+                          </Fade>
                         <Row>
                           <Col>
                             <Fade bottom opposite collapse when={this.state.show7}>
