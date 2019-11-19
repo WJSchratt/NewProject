@@ -8,6 +8,7 @@ import PageOne from "./PageOne.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -65,7 +66,8 @@ render() {
     <div className="App"
       onScroll={this.onScroll}>
     <Overlay/>
-    <PageOne/>
+    <PageOne
+              width={this.state.windowWith}/>
 <h1>Your view width is {this.state.windowWith} you are probably on a {this.state.device} {this.state.position}</h1>
 <h1>hello</h1>
 <h1>hello</h1>

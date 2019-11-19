@@ -11,6 +11,7 @@ import Project3 from "./pics/Screen Shot 2019-11-18 at 3.10.53 PM.png"
 import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 
 
+
 export default class Test extends Component {
 
   constructor(props) {
@@ -33,11 +34,13 @@ export default class Test extends Component {
       this.closeNav = this.closeNav.bind(this);
       this.typeWriter = this.typeWriter.bind(this);
       this.reveal = this.reveal.bind(this);
+      this.handleResize = this.handleResize.bind(this);
   }
 
 componentDidMount() {
       document.addEventListener("click", this.closeNav);
       this.typeWriter();
+      window.addEventListener('resize', this.handleResize);
 }
 
 componentWillUnmount() {
@@ -89,7 +92,7 @@ this.timer.push(
       .bind(this),
       7300
   )) ;
-  this.timer.push(
+this.timer.push(
   setTimeout(
       function() {
       this.setState({ show5: true,})
@@ -97,7 +100,7 @@ this.timer.push(
       .bind(this),
       8300
   )) ;
-  this.timer.push(
+this.timer.push(
   setTimeout(
       function() {
       this.setState({ show6: true,})
@@ -144,14 +147,7 @@ openNav() {
     const style = { height : " 100%",};
     this.setState({ style });
     document.addEventListener("click", this.closeNav);
-    this.setState({ show1: false,
-                    show: false,
-                    show2: false,
-                    show3: false,
-                    show4: false,
-                    show5: false,
-                    show6: false,
-                    show7: true,})
+    this.setState({ show7: true,})
 
 
   }
@@ -166,11 +162,24 @@ closeNav() {
     const style = { height : 0, };
     this.setState({ style,
                     show:false,
+                    show1:false,
+                    show2:false,
+                    show3:false,
+                    show4:false,
+                    show5:false,
                     show6:false,
                     show7:false,
                     closeNav: !this.state.closeNav,});
-    this.timer.forEach(element => clearTimeout(element))
+
+this.timer.forEach(element => clearTimeout(element));
 }
+
+handleResize = (event) => {
+  this.setState({ width: window.innerWidth })
+  console.log(this.state.width)
+
+  }
+
 
 
 
@@ -266,7 +275,7 @@ closeNav() {
                         <Col><Fade bottom opposite collapse when={this.state.show7}>
                             <a href="#example" >
                             <h1>Demo for client</h1>
-                            <Image alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
+                            <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
                             </a>
                           </Fade>
                         </Col>
