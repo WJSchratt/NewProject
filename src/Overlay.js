@@ -176,7 +176,8 @@ this.timer.forEach(element => clearTimeout(element));
 
 handleResize = (event) => {
   this.setState({ width: window.innerWidth })
-  console.log(this.state.width)
+  if (this.state.width > 800){
+  }
 
   }
 
