@@ -74,12 +74,20 @@ this.timer.push(
       this.setState({show3: true})
   }
       .bind(this),
-      5300
+      4300
   ))
 this.timer.push(
   setTimeout(
       function() {
       this.setState({ show4: true,})
+  }
+      .bind(this),
+      5300
+  )) ;
+this.timer.push(
+  setTimeout(
+      function() {
+      this.setState({ show5: true,})
   }
       .bind(this),
       6300
@@ -95,18 +103,10 @@ this.timer.push(
 this.timer.push(
   setTimeout(
       function() {
-      this.setState({ show5: true,})
-  }
-      .bind(this),
-      8300
-  )) ;
-this.timer.push(
-  setTimeout(
-      function() {
       this.setState({ show6: true,})
   }
       .bind(this),
-      8000
+      7300
   )) ;
 this.timer.push(
   setTimeout(
@@ -118,7 +118,7 @@ this.timer.push(
                       show5: false,})
   }
       .bind(this),
-      10300
+    9300
   ));
 
 this.timer.push(
@@ -128,7 +128,7 @@ this.timer.push(
                         show6:false,})
 }
 .bind(this),
-15000
+13300
 
 ));
 this.timer.push(
@@ -139,7 +139,7 @@ setTimeout(
                         show7:true,})
 }
 .bind(this),
-16000
+14300
 ));
   }
 
@@ -169,7 +169,7 @@ closeNav() {
                     show5:false,
                     show6:false,
                     show7:false,
-                    closeNav: !this.state.closeNav,});
+                    });
 
 this.timer.forEach(element => clearTimeout(element));
 }
