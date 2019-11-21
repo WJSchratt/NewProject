@@ -67,3 +67,6 @@ a :hover {
   height:30px;
   z-index: 1 !important;
 }
+.proj {
+  position:static;
+}
