@@ -11,6 +11,7 @@
 
 .cute {
  font-size: 4rem;
+ display:none;
 }
 a :hover {
   opacity: 0.5;
@@ -19,7 +20,7 @@ a :hover {
 
 .page1{
   overflow:scroll;
-  height:100vh;
+  height:120vh;
   -ms-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -43,12 +44,17 @@ a :hover {
 }
 #test {
     position:absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 10rem;
     text-align: center;
     z-index:0;
+}
+#black{
+  color:black !important;
+  display:none
+
 }
 
 
@@ -79,5 +85,9 @@ a :hover {
   }
 }
 .swing {
-  animation: bounceIn 2s;
+  display:none;
+  text-align: center;
+}
+.device {
+  color:white;
 }

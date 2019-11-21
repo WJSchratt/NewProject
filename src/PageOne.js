@@ -39,32 +39,24 @@ export default class PageOne extends Component {
 
     handlePosition = (event) => {
     this.setState({ position: window.scrollY });
-    if (this.state.postion === 728){
-
+    if (this.state.position > 100){
+      $(".swing").slideDown("slow")
+      setTimeout(
+            function() {
+              $("#black").slideDown("slow")
+            }
+            .bind(this),
+            2000
+        )
     }
+
   }
 
     componentDidMount() {
-
-      setTimeout(
-            function() {
-              $(".cute").animate({opacity:0});
-            }
-
-            .bind(this),
-            1
-        )
       this.setState ({position:window.scrollY})
       window.addEventListener('scroll', this.handlePosition);
       window.addEventListener('resize', this.handleResize);
       document.addEventListener('click', this.fade);
-      if (window.windowWidth > 1100 ){
-        this.setState({device:"Desktop"})
-      }
-      else{
-        this.setState({device:"Phone"})
-
-      }
     }
 
     componentDidUnmount() {
@@ -75,19 +67,16 @@ export default class PageOne extends Component {
     fade = () => {
       var slideSource = document.getElementById('slideSource');
       this.timer = [];
-      console.log("hey")
       document.removeEventListener('click', this.fade);
         this.timer.push(
         setTimeout(
               function() {
-                $(".cute").animate({opacity:1}, 2000);
+                $(".cute").slideDown("fast")
               }
               .bind(this),
               2000
           ))
     }
-
-
 
 
   render() {
@@ -104,17 +93,22 @@ export default class PageOne extends Component {
           <Row>
             W.J.SCHRATT
           </Row>
+          <Row>
+            <h2 className="device">Welcome {this.state.device} user</h2>
+          </Row>
           <Row id="slideSource" className="slideSource">
             <h1 className="slideSource"></h1>
           </Row>
           <Row>
             <Col><h4 className="cute">Responsive Accessible Code</h4></Col>
-            <p className="swing">The Caterpillar and Alice looked at each other for some time in silence:
-            at last the Caterpillar took the hookah out of its mouth, and addressed
-            her in a languid, sleepy voice.</p>
-
+            <p className="swing">JavaScript, React, Html, Css, Java is my game</p>
           </Row>
-          <input type="button" id="button" value="Click Me"></input>
+          <Row>
+          <p id="black">To view my projects click on the toggle menu on the top left</p>
+          </Row>
+          <Row>
+          {this.state.position}
+          </Row>
           </div>
         </Container>
 
