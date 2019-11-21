@@ -45,7 +45,15 @@ export default class PageOne extends Component {
   }
 
     componentDidMount() {
-      $("cute").hide();
+
+      setTimeout(
+            function() {
+              $(".cute").animate({opacity:0});
+            }
+
+            .bind(this),
+            1
+        )
       this.setState ({position:window.scrollY})
       window.addEventListener('scroll', this.handlePosition);
       window.addEventListener('resize', this.handleResize);
@@ -72,20 +80,10 @@ export default class PageOne extends Component {
         this.timer.push(
         setTimeout(
               function() {
-                $(".cute").show(500);
+                $(".cute").animate({opacity:1}, 2000);
               }
               .bind(this),
-              1000
-          ))
-        this.timer.push(
-        setTimeout(
-              function() {
-                $(".cute").hide();
-              }
-
-              .bind(this),
-              10
-
+              2000
           ))
     }
 
@@ -100,9 +98,6 @@ export default class PageOne extends Component {
           <Nav.Link href="/home"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
           <Nav.Link eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
           <Nav.Link eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
         </Nav>
         <Container>
         <div id="test">
@@ -114,8 +109,12 @@ export default class PageOne extends Component {
           </Row>
           <Row>
             <Col><h4 className="cute">Responsive Accessible Code</h4></Col>
+            <p className="swing">The Caterpillar and Alice looked at each other for some time in silence:
+            at last the Caterpillar took the hookah out of its mouth, and addressed
+            her in a languid, sleepy voice.</p>
 
           </Row>
+          <input type="button" id="button" value="Click Me"></input>
           </div>
         </Container>
 
