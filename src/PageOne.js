@@ -4,6 +4,11 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import $ from 'jquery';
+import Nav from 'react-bootstrap/Nav'
+import Git from "./pics/github-logo.png"
+import Image from 'react-bootstrap/Image'
+import Mail from "./pics/e-mail.png"
+import LinkIn from "./pics/linkedin-sign.png"
 
 
 
@@ -62,13 +67,8 @@ export default class PageOne extends Component {
     fade = () => {
       var slideSource = document.getElementById('slideSource');
       this.timer = [];
-      this.timer.push(
-      setTimeout(
-            function() {
-            }
-            .bind(this),
-            3000
-        ))
+      console.log("hey")
+      document.removeEventListener('click', this.fade);
         this.timer.push(
         setTimeout(
               function() {
@@ -81,11 +81,11 @@ export default class PageOne extends Component {
         setTimeout(
               function() {
                 $(".cute").hide();
-                $("#slideSource").hide(50);
               }
 
               .bind(this),
               10
+
           ))
     }
 
@@ -96,20 +96,27 @@ export default class PageOne extends Component {
       return (
 
         <div className="page1">
+        <Nav defaultActiveKey="/home" id="nav" className="flex-column">
+          <Nav.Link href="/home"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
+          <Nav.Link eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
+          <Nav.Link eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
+          <Nav.Link eventKey="disabled" disabled>
+            Disabled
+          </Nav.Link>
+        </Nav>
         <Container>
         <div id="test">
           <Row>
             W.J.SCHRATT
           </Row>
-          <Row id="slideSource">
-            Front-End Web-Developer
+          <Row id="slideSource" className="slideSource">
+            <h1 className="slideSource"></h1>
           </Row>
-        </div>
           <Row>
-            <Col><h4 className="cute">Responsive</h4></Col>
-            <Col><h4 className="cute">Competent</h4></Col>
-            <Col><h4 className="cute">Accessible</h4></Col>
+            <Col><h4 className="cute">Responsive Accessible Code</h4></Col>
+
           </Row>
+          </div>
         </Container>
 
 

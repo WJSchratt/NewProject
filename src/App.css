@@ -9,7 +9,11 @@
 
 }
 
-#cute {
+.cute {
+ font-size: 30px;
+}
+a :hover {
+  opacity: 0.5;
 
 }
 
@@ -30,10 +34,36 @@
 .introduction {
   text-align: center !important;
 }
+#nav{
+  position: -webkit-sticky;
+  position: sticky;
+  position: fixed;
 
+  top: 35%;
+}
 #test {
-padding-top:5vh;
-font-size: 15vh;
-text-align: center;
-margin-top: ;
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    text-align: center;
+    z-index:0;
+}
+
+#slideSource{
+  font-size: 100px !important;
+  text-align: center;
+  z-index: -1;
+}
+
+.slideSource{
+  font-size: 100px !important;
+  text-align: center;
+}
+
+.sidebar{
+  font-size: 3vw;
+  height:30px;
+  z-index: 1 !important;
 }
