@@ -13,6 +13,7 @@
     "react-scripts": "3.2.0",
     "react-scroll-parallax": "^2.2.0",
     "react-scrollable-anchor": "^0.6.1",
+    "react-socks": "^2.1.0",
     "snapsvg": "^0.5.1",
     "time-events-manager": "^0.1.1"
   },

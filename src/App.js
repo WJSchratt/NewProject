@@ -6,6 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import PageOne from "./PageOne.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import  { Breakpoint, BreakpointProvider } from 'react-socks';
 
 
 
@@ -20,13 +21,14 @@ class App extends Component {
 render() {
 
     return (
-
-    <div className="App"
-      >
+    <div className="App" >
+    <BreakpointProvider>
     <Overlay  />
+    </BreakpointProvider>
+    <BreakpointProvider>
     <PageOne />
-
-<h1>hello</h1>
+    </BreakpointProvider>
+    <h1>hello</h1>
 <h1>hello</h1>
 <h1>hello</h1>
 <h1>hello</h1>
@@ -37,10 +39,7 @@ render() {
 <h1>hello</h1><h1>hello</h1>
 <h1>hello</h1>
 <h1>hello</h1>
-
-
-
-    </div>
+</div>
 
   );
 }}

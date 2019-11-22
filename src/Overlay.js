@@ -196,11 +196,11 @@ handleResize = (event) => {
               <div className = "sidenav-container">
                 <div className = "overlay-content">
                   <div className = "text-center">
-                  <Container>
+                  <Container className= "overlay">
                   <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show}>
-                          <p>Hello My Name is Walter Schratt</p>
+                          <p className="white">Hello My Name is Walter Schratt</p>
                         </Fade>
                       </Col>
                     </Row>
