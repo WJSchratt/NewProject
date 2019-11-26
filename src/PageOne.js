@@ -46,7 +46,7 @@ export default class PageOne extends Component {
               $("#black").slideDown("slow")
             }
             .bind(this),
-            2000
+            800
         )
     }
 
@@ -74,7 +74,7 @@ export default class PageOne extends Component {
                 $(".cute").slideDown("fast")
               }
               .bind(this),
-              2000
+              1000
           ))
     }
 
@@ -84,9 +84,9 @@ export default class PageOne extends Component {
 
         <div className="page1">
         <Nav defaultActiveKey="/home" id="nav" className="flex-column">
-          <Nav.Link href="/home"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
-          <Nav.Link eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
-          <Nav.Link eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
+          <Nav.Link href="https://github.com/WJSchratt"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
+          <Nav.Link href="mailto:john.schratt1@gmail.com" eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
+          <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
         </Nav>
         <Container>
         <div id="test">
@@ -101,7 +101,7 @@ export default class PageOne extends Component {
           </Row>
           <Row>
             <Col><h4 className="cute">Responsive Accessible Code</h4></Col>
-            <p className="swing">JavaScript, React, Html, Css, Java is my game</p>
+            <p className="swing">JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
           <Row>
           <p id="black">To view my projects click on the toggle menu on the top left</p>
@@ -111,6 +111,10 @@ export default class PageOne extends Component {
           </Row>
           </div>
         </Container>
+
+
+
+
 
 
 

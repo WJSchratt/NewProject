@@ -9,6 +9,25 @@ import Row from 'react-bootstrap/Row'
 import Project2 from "./pics/Screen Shot 2019-11-18 at 3.09.32 PM.png"
 import Project3 from "./pics/Screen Shot 2019-11-18 at 3.10.53 PM.png"
 import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
+import { useMediaQuery } from 'react-responsive'
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 992 })
+  return isDesktop ? children : null
+}
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+  return isTablet ? children : null
+}
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  return isMobile ? children : null
+}
+const Default = ({ children }) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 })
+  return isNotMobile ? children : null
+}
+
 
 
 
@@ -186,6 +205,8 @@ handleResize = (event) => {
 
   render() {
       return (
+        <div>
+        <Desktop>
         <div id='wrapper'>
         <div>
           <div
@@ -249,7 +270,7 @@ handleResize = (event) => {
                     <Row>
                       <Col>
                         <Fade bottom opposite collapse when={this.state.show7}>
-                          <a href="#example" >
+                          <a href="https://jams-react.netlify.com/" >
                             <h1>Music Player</h1>
                             <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
                           </a>
@@ -257,7 +278,7 @@ handleResize = (event) => {
                       </Col>
                       <Col>
                         <Fade bottom opposite collapse when={this.state.show7}>
-                          <a href="#example" >
+                          <a href="https://chatt-app.netlify.com/" >
                             <h1>Chat-Application
                             </h1>
                             <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
@@ -267,14 +288,14 @@ handleResize = (event) => {
                     </Row>
                     <Row>
                       <Col><Fade bottom opposite collapse when={this.state.show7}>
-                            <a href="#example" >
+                            <a href="https://beas-wed.netlify.com/" >
                             <h1>Website</h1>
                             <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
                             </a>
                           </Fade>
                         </Col>
                         <Col><Fade bottom opposite collapse when={this.state.show7}>
-                            <a href="#example" >
+                            <a href="https://shirt-demo.netlify.com/" >
                             <h1>Demo for client</h1>
                             <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
                             </a>
@@ -305,6 +326,250 @@ handleResize = (event) => {
               </nav>
 
             </div>
+            </Desktop>
+            <Tablet>
+            <div id='wrapper'>
+            <div>
+              <div
+                  ref       = "snav"
+                  className = "overlay"
+                  style     = {this.state.style}
+              >
+                  <div className = "sidenav-container">
+                    <div className = "overlay-content">
+                      <div className = "text-center">
+                      <Container>
+                      <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show}>
+                              <p>Hello My Name is Walter Schratt</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show1}>
+                              <p>I am a </p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                        <Col>
+                          <Fade top opposite collapse when={this.state.show2}>
+                            <p>Web-Developer</p>
+                          </Fade>
+                        </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show3}>
+                              <p>Front-End Engineer</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show4}>
+                              <p>Ux designer</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show5}>
+                              <p>React.js specialist</p>
+                            </Fade>
+                          </Col>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show6}>
+                              <p>Someone who loves to code</p>
+                            </Fade>
+                          </Col>
+                        <div className="proj">
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                                <h1 className="center">Projects</h1>
+                            </Fade>
+                        <Row>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <a href="https://jams-react.netlify.com/" >
+                                <h1>Music Player</h1>
+                                <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
+                              </a>
+                            </Fade>
+                          </Col>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <a href="https://chatt-app.netlify.com/" >
+                                <h1>Chat-Application
+                                </h1>
+                                <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
+                              </a>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col><Fade bottom opposite collapse when={this.state.show7}>
+                                <a href="https://beas-wed.netlify.com/" >
+                                <h1>Website</h1>
+                                <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
+                                </a>
+                              </Fade>
+                            </Col>
+                            <Col><Fade bottom opposite collapse when={this.state.show7}>
+                                <a href="https://shirt-demo.netlify.com/" >
+                                <h1>Demo for client</h1>
+                                <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
+                                </a>
+                              </Fade>
+                            </Col>
+                          </Row>
+                        </div>
+                      </Container>
+                    </div>
+                  </div>
+                    <Fade top opposite collapse when={this.state.show}>
+                      <a
+                          style={{cursor:"pointer"}}
+                          className = "closebtn"
+                          onClick   = {this.closeNav}
+                      >
+                          ×
+                      </a>
+                      </Fade>
+                    <div className = "list-group">
+
+                      </div>
+                    </div>
+                </div>
+                </div>
+                  <nav class="navbar navbar-expand-lg navbar-light" id="navi">
+                    <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
+                  </nav>
+
+                </div>
+            </Tablet>
+            <Mobile>
+            <div id='wrapper'>
+            <div>
+              <div
+                  ref       = "snav"
+                  className = "overlay"
+                  style     = {this.state.style}
+              >
+                  <div className = "sidenav-container">
+                    <div className = "overlay-content">
+                      <div className = "text-center">
+                      <Container>
+                      <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show}>
+                              <p>Hello My Name is Walter Schratt</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show1}>
+                              <p>I am a </p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                        <Col>
+                          <Fade top opposite collapse when={this.state.show2}>
+                            <p>Web-Developer</p>
+                          </Fade>
+                        </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show3}>
+                              <p>Front-End Engineer</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show4}>
+                              <p>Ux designer</p>
+                            </Fade>
+                          </Col>
+                        </Row>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show5}>
+                              <p>React.js specialist</p>
+                            </Fade>
+                          </Col>
+                          <Col>
+                            <Fade top opposite collapse when={this.state.show6}>
+                              <p>Someone who loves to code</p>
+                            </Fade>
+                          </Col>
+                        <div className="proj">
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                                <h1 className="center">Projects</h1>
+                            </Fade>
+                        <Row>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <a href="#example" >
+                                <h1>Music Player</h1>
+                                <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
+                              </a>
+                            </Fade>
+                          </Col>
+                          <Col>
+                            <Fade bottom opposite collapse when={this.state.show7}>
+                              <a href="#example" >
+                                <h1>Chat-Application
+                                </h1>
+                                <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
+                              </a>
+                            </Fade>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col><Fade bottom opposite collapse when={this.state.show7}>
+                                <a href="#example" >
+                                <h1>Website</h1>
+                                <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
+                                </a>
+                              </Fade>
+                            </Col>
+                            <Col><Fade bottom opposite collapse when={this.state.show7}>
+                                <a href="#example" >
+                                <h1>Demo for client</h1>
+                                <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
+                                </a>
+                              </Fade>
+                            </Col>
+                          </Row>
+                        </div>
+                      </Container>
+                    </div>
+                  </div>
+                    <Fade top opposite collapse when={this.state.show}>
+                      <a
+                          style={{cursor:"pointer"}}
+                          className = "closebtn"
+                          onClick   = {this.closeNav}
+                      >
+                          ×
+                      </a>
+                      </Fade>
+                    <div className = "list-group">
+
+                      </div>
+                    </div>
+                </div>
+                </div>
+                  <nav class="navbar navbar-expand-lg navbar-light" id="navi">
+                    <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
+                  </nav>
+
+                </div>
+              </Mobile>
+          </div>
         );
     }
 }
