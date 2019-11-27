@@ -82,7 +82,7 @@ export default class PageOne extends Component {
 
     componentDidUnmount() {
       window.removeEventListener('resize', this.handleResize)
-      window.removeEventListener('scroll', this.handlePostion);
+      window.removeEventListener('scroll', this.handlePostion)
     }
 
     fade = () => {
@@ -189,18 +189,19 @@ export default class PageOne extends Component {
                       textalign:"center",
                        }}>
           <h3 className="center" style={{textalign:"center",
-                                         fontSize:"3rem",
+                                         fontSize:"1.5rem",
                                                           }}>
           WJSchratt
           </h3>
           <Row>
-            <h2 style={{ color:"white",
-                          fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+            <h2 className="cute"style={{ color:"white",
+                          fontSize:"0.3rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
           </Row>
           <Row>
-            <Col><h4 style={{ fontSize:"1.5rem",
-                              textalign:"center"}}className="cute">Responsive Accessible Code</h4></Col>
-            <p className="swing">JavaScript, React, Html, Css, and Java are my game</p>
+            <Col><h4 style={{ fontSize:"0.5rem",
+                              textalign:"center !important"}}className="cute">Responsive Accessible Code</h4></Col>
+            <p className="swing" style={{ fontSize:"0.8rem",
+                                textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
           <Row>
