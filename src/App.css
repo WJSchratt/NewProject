@@ -10,15 +10,19 @@
 }
 
 .page2 {
-  height: 50vh;
-  background: linear-gradient(90deg, rgba(36,180,181,1) 11%, rgba(0,9,121,1) 100%);
-  color:black;
+  height: 40vh;
+  background: black;
+  color:white;
   text-align: center;
   font-size: 10vh;
 }
-.margin {
-  padding-top: 10%
-}
+.bottom {
+  padding-top: 10%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+  }
 .overlay p {
   font-size: 5vh !important ;
   color: white !important ;

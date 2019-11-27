@@ -51,7 +51,7 @@ this.handleResize = this.handleResize.bind(this)
         this.setState({device:"Mobile"})
 
       }
-      else if(this.state.windowWith < 1400) {
+      else if(this.state.windowWith < 1600) {
         this.setState({device:"Computer"})
       }
 
