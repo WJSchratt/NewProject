@@ -454,8 +454,8 @@ handleResize = (event) => {
 
 
             <Mobile>
-            
-              </Mobile>
+            <h1>hello</h1>
+            </Mobile>
           </div>
         );
     }
