@@ -327,6 +327,9 @@ handleResize = (event) => {
 
             </div>
             </Desktop>
+
+
+
             <Tablet>
             <div id='wrapper'>
             <div>
@@ -437,7 +440,6 @@ handleResize = (event) => {
                       </a>
                       </Fade>
                     <div className = "list-group">
-
                       </div>
                     </div>
                 </div>
@@ -448,6 +450,9 @@ handleResize = (event) => {
 
                 </div>
             </Tablet>
+
+
+
             <Mobile>
             <div id='wrapper'>
             <div>
@@ -514,7 +519,6 @@ handleResize = (event) => {
                             <Fade bottom opposite collapse when={this.state.show7}>
                               <a href="#example" >
                                 <h1>Music Player</h1>
-                                <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
                               </a>
                             </Fade>
                           </Col>
@@ -523,7 +527,6 @@ handleResize = (event) => {
                               <a href="#example" >
                                 <h1>Chat-Application
                                 </h1>
-                                <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
                               </a>
                             </Fade>
                           </Col>
@@ -532,14 +535,12 @@ handleResize = (event) => {
                           <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="#example" >
                                 <h1>Website</h1>
-                                <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
                                 </a>
                               </Fade>
                             </Col>
                             <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="#example" >
                                 <h1>Demo for client</h1>
-                                <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
                                 </a>
                               </Fade>
                             </Col>
