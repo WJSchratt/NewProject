@@ -42,7 +42,7 @@ export default class PageOne extends Component {
       show: false,
     }
 
-
+this.handleResize = this.handleResize.bind(this)
   }
 
     handleResize = (event) => {
@@ -62,7 +62,7 @@ export default class PageOne extends Component {
 
     handlePosition = (event) => {
     this.setState({ position: window.scrollY });
-    if (this.state.position > 100){
+    if (this.state.position > 10){
       $(".swing").slideDown("slow")
       setTimeout(
             function() {
@@ -81,6 +81,7 @@ export default class PageOne extends Component {
       window.addEventListener('scroll', this.handlePosition);
       window.addEventListener('resize', this.handleResize);
       document.addEventListener('click', this.fade);
+      this.handleResize();
     }
 
     componentDidUnmount() {
@@ -199,13 +200,14 @@ export default class PageOne extends Component {
           </h3>
           <Row>
             <h2 className="cute"style={{ color:"white",
-                          fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span>t</h2>
+                          fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
           </Row>
           <Row>
             <Col><h4 classname="wow" style={{ fontSize:"1.7rem",
                               textalign:"center"}}>I Create Responsive Accessible Code</h4></Col>
             <p className="swing" style={{ fontSize:"1.2rem",
-                                textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
+                                          textalign:"center !important",
+                                          color:"white"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
           <Row>
