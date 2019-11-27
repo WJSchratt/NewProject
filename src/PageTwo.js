@@ -1,9 +1,12 @@
-
+import React, { Component } from 'react';
 
 export default class PageOne extends Component {
-  constructor(props) {
 
     render() {
         return (
+          <div className="page2">
+          <h1 className="margin">Thank you for visting my page </h1>
+          </div>
         )
+}
 }

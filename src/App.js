@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import PageOne from "./PageOne.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import PageTwo from "./PageTwo.js"
 
 
 class App extends Component {
@@ -25,20 +25,7 @@ render() {
       >
     <Overlay  />
     <PageOne />
-
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1><h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-
-
-
+    <PageTwo />
     </div>
 
   );
