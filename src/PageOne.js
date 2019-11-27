@@ -47,9 +47,12 @@ export default class PageOne extends Component {
 
     handleResize = (event) => {
       this.setState({ windowWith: window.innerWidth })
-      if (this.state.windowWith < 1100) {
+      if (this.state.windowWith < 800) {
         this.setState({device:"phone"})
 
+      }
+      else if(this.state.windowWith < 1200) {
+        this.setState({device:"Computer"})
       }
 
       else{
@@ -116,7 +119,7 @@ export default class PageOne extends Component {
         <div style={{fontSize:"7rem"}}id="test">
             W.J.SCHRATT
           <Row>
-            <h2 className="device">Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+            <h2 className="device">Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
           </Row>
           <Row>
             <Col><h4 style={{fontSize:"5rem"}} className="cute">Responsive Accessible Code</h4></Col>
@@ -124,7 +127,8 @@ export default class PageOne extends Component {
                                         color:"white", }}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
           <Row>
-          <p id="black" style={{fontSize:"2rem"}}>To view my projects click on the toggle menu on the top left</p>
+          <p id="black" style={{fontSize:"2rem",
+                                color:"#212529"}}>To view my projects click on the toggle menu on the top left</p>
           </Row>
           <Row>
           {this.state.position}
@@ -189,18 +193,18 @@ export default class PageOne extends Component {
                       textalign:"center",
                        }}>
           <h3 className="center" style={{textalign:"center",
-                                         fontSize:"1.5rem",
+                                         fontSize:"4rem",
                                                           }}>
           WJSchratt
           </h3>
           <Row>
             <h2 className="cute"style={{ color:"white",
-                          fontSize:"0.3rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+                          fontSize:"2.8rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
           </Row>
           <Row>
-            <Col><h4 style={{ fontSize:"0.5rem",
+            <Col><h4 style={{ fontSize:"2.5rem",
                               textalign:"center !important"}}className="cute">Responsive Accessible Code</h4></Col>
-            <p className="swing" style={{ fontSize:"0.8rem",
+            <p className="swing" style={{ fontSize:"3rem",
                                 textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
