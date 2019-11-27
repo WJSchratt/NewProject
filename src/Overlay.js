@@ -221,46 +221,46 @@ handleResize = (event) => {
                   <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show}>
-                          <p>Hello My Name is Walter Schratt</p>
+                          <p className="white">Hello My Name is Walter Schratt</p>
                         </Fade>
                       </Col>
                     </Row>
                     <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show1}>
-                          <p>I am a </p>
+                          <p className="white">I am a </p>
                         </Fade>
                       </Col>
                     </Row>
                     <Row>
                     <Col>
                       <Fade top opposite collapse when={this.state.show2}>
-                        <p>Web-Developer</p>
+                        <p className="white">Web-Developer</p>
                       </Fade>
                     </Col>
                     </Row>
                     <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show3}>
-                          <p>Front-End Engineer</p>
+                          <p className="white">Front-End Engineer</p>
                         </Fade>
                       </Col>
                     </Row>
                     <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show4}>
-                          <p>Ux designer</p>
+                          <p className="white">Ux designer</p>
                         </Fade>
                       </Col>
                     </Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show5}>
-                          <p>React.js specialist</p>
+                          <p className="white">React.js specialist</p>
                         </Fade>
                       </Col>
                       <Col>
                         <Fade top opposite collapse when={this.state.show6}>
-                          <p>Someone who loves to code</p>
+                          <p className="white">Someone who loves to code</p>
                         </Fade>
                       </Col>
                     <div className="proj">
@@ -345,46 +345,46 @@ handleResize = (event) => {
                       <Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show}>
-                              <p>Hello My Name is Walter Schratt</p>
+                              <p className="white">Hello My Name is Walter Schratt</p>
                             </Fade>
                           </Col>
                         </Row>
                         <Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show1}>
-                              <p>I am a </p>
+                              <p className="white">I am a </p>
                             </Fade>
                           </Col>
                         </Row>
                         <Row>
                         <Col>
                           <Fade top opposite collapse when={this.state.show2}>
-                            <p>Web-Developer</p>
+                            <p className="white">Web-Developer</p>
                           </Fade>
                         </Col>
                         </Row>
                         <Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show3}>
-                              <p>Front-End Engineer</p>
+                              <p className="white">Front-End Engineer</p>
                             </Fade>
                           </Col>
                         </Row>
                         <Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show4}>
-                              <p>Ux designer</p>
+                              <p className="white">Ux designer</p>
                             </Fade>
                           </Col>
                         </Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show5}>
-                              <p>React.js specialist</p>
+                              <p className="white">React.js specialist</p>
                             </Fade>
                           </Col>
                           <Col>
                             <Fade top opposite collapse when={this.state.show6}>
-                              <p>Someone who loves to code</p>
+                              <p className="white">Someone who loves to code</p>
                             </Fade>
                           </Col>
                         <div className="proj">
@@ -454,121 +454,7 @@ handleResize = (event) => {
 
 
             <Mobile>
-            <div id='wrapper'>
-            <div>
-              <div
-                  ref       = "snav"
-                  className = "overlay"
-                  style     = {this.state.style}
-              >
-                  <div className = "sidenav-container">
-                    <div className = "overlay-content">
-                      <div className = "text-center">
-                      <Container>
-                      <Row>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show}>
-                              <p>Hello My Name is Walter Schratt</p>
-                            </Fade>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show1}>
-                              <p>I am a </p>
-                            </Fade>
-                          </Col>
-                        </Row>
-                        <Row>
-                        <Col>
-                          <Fade top opposite collapse when={this.state.show2}>
-                            <p>Web-Developer</p>
-                          </Fade>
-                        </Col>
-                        </Row>
-                        <Row>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show3}>
-                              <p>Front-End Engineer</p>
-                            </Fade>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show4}>
-                              <p>Ux designer</p>
-                            </Fade>
-                          </Col>
-                        </Row>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show5}>
-                              <p>React.js specialist</p>
-                            </Fade>
-                          </Col>
-                          <Col>
-                            <Fade top opposite collapse when={this.state.show6}>
-                              <p>Someone who loves to code</p>
-                            </Fade>
-                          </Col>
-                        <div className="proj">
-                            <Fade bottom opposite collapse when={this.state.show7}>
-                                <h1 className="center">Projects</h1>
-                            </Fade>
-                        <Row>
-                          <Col>
-                            <Fade bottom opposite collapse when={this.state.show7}>
-                              <a href="#example" >
-                                <h1>Music Player</h1>
-                              </a>
-                            </Fade>
-                          </Col>
-                          <Col>
-                            <Fade bottom opposite collapse when={this.state.show7}>
-                              <a href="#example" >
-                                <h1>Chat-Application
-                                </h1>
-                              </a>
-                            </Fade>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col><Fade bottom opposite collapse when={this.state.show7}>
-                                <a href="#example" >
-                                <h1>Website</h1>
-                                </a>
-                              </Fade>
-                            </Col>
-                            <Col><Fade bottom opposite collapse when={this.state.show7}>
-                                <a href="#example" >
-                                <h1>Demo for client</h1>
-                                </a>
-                              </Fade>
-                            </Col>
-                          </Row>
-                        </div>
-                      </Container>
-                    </div>
-                  </div>
-                    <Fade top opposite collapse when={this.state.show}>
-                      <a
-                          style={{cursor:"pointer"}}
-                          className = "closebtn"
-                          onClick   = {this.closeNav}
-                      >
-                          ×
-                      </a>
-                      </Fade>
-                    <div className = "list-group">
-
-                      </div>
-                    </div>
-                </div>
-                </div>
-                  <nav class="navbar navbar-expand-lg navbar-light" id="navi">
-                    <span classname="burger-overlay" style={{fontSize:45,cursor:"pointer"}} onClick={this.openNav}>&#9776;</span>
-                  </nav>
-
-                </div>
+            
               </Mobile>
           </div>
         );
