@@ -122,7 +122,7 @@ export default class PageOne extends Component {
             <h2 className="device">Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
           </Row>
           <Row>
-            <Col><h4 style={{fontSize:"5rem"}} className="cute">Responsive Accessible Code</h4></Col>
+            <Col><h4 style={{fontSize:"4rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
             <p className="swing" style={{fontSize:"3rem",
                                         color:"white", }}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
@@ -162,7 +162,7 @@ export default class PageOne extends Component {
                            fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
             </Row>
             <Row>
-              <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">Responsive Accessible Code</h4></Col>
+              <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">I Create Responsive Accessible Code</h4></Col>
               <p className="swing" style={{ fontSize:"4rem",
                                             color:"white",
                                             display:"none"}}>JavaScript, React, Html, Css, and Java are my game</p>
@@ -203,7 +203,7 @@ export default class PageOne extends Component {
           </Row>
           <Row>
             <Col><h4 style={{ fontSize:"2.5rem",
-                              textalign:"center !important"}}className="cute">Responsive Accessible Code</h4></Col>
+                              textalign:"center !important"}}>I Create Responsive Accessible Code</h4></Col>
             <p className="swing" style={{ fontSize:"3rem",
                                 textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
