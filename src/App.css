@@ -9,6 +9,11 @@
 
 }
 
+.overlay p {
+  font-size: 5vh !important ;
+  color: white !important ;
+}
+
 .cute {
  font-size: 4rem;
  display:none;
@@ -57,7 +62,9 @@ a :hover {
 
 }
 
-
+.center{
+  text-align: center !important;
+}
 .slideSource{
   font-size: 100px !important;
   text-align: center;
