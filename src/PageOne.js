@@ -48,10 +48,10 @@ export default class PageOne extends Component {
     handleResize = (event) => {
       this.setState({ windowWith: window.innerWidth })
       if (this.state.windowWith < 800) {
-        this.setState({device:"phone"})
+        this.setState({device:"Mobile"})
 
       }
-      else if(this.state.windowWith < 1200) {
+      else if(this.state.windowWith < 1400) {
         this.setState({device:"Computer"})
       }
 
@@ -186,25 +186,25 @@ export default class PageOne extends Component {
         </Nav>
         <Container>
         <div style={{ position:"absolute",
-                      top: "20%",
+                      top: "30%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
                       fontSize:"2rem",
                       textalign:"center",
                        }}>
           <h3 className="center" style={{textalign:"center",
-                                         fontSize:"2rem",
+                                         fontSize:"2.5rem",
                                                           }}>
           WJSchratt
           </h3>
           <Row>
             <h2 className="cute"style={{ color:"white",
-                          fontSize:"1.2rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
+                          fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span>t</h2>
           </Row>
           <Row>
-            <Col><h4 style={{ fontSize:"1.4rem",
-                              textalign:"center !important"}}>I Create Responsive Accessible Code</h4></Col>
-            <p className="swing" style={{ fontSize:"1rem",
+            <Col><h4 classname="wow" style={{ fontSize:"1.7rem",
+                              textalign:"center"}}>I Create Responsive Accessible Code</h4></Col>
+            <p className="swing" style={{ fontSize:"1.2rem",
                                 textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
