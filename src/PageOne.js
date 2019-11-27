@@ -10,6 +10,10 @@ import Image from 'react-bootstrap/Image'
 import Mail from "./pics/e-mail.png"
 import LinkIn from "./pics/linkedin-sign.png"
 import { useMediaQuery } from 'react-responsive'
+import Project2 from "./pics/Screen Shot 2019-11-18 at 3.09.32 PM.png"
+import Project3 from "./pics/Screen Shot 2019-11-18 at 3.10.53 PM.png"
+import Project1 from "./pics/Screen Shot 2019-11-18 at 3.08.40 PM.png";
+import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 1400 })
@@ -60,6 +64,7 @@ export default class PageOne extends Component {
       setTimeout(
             function() {
               $("#black").slideDown("slow")
+              $(".cute").slideDown("slow")
             }
             .bind(this),
             800
@@ -88,10 +93,12 @@ export default class PageOne extends Component {
         setTimeout(
               function() {
                 $(".cute").slideDown("fast")
+                console.log("hey")
               }
               .bind(this),
               1000
           ))
+
     }
 
 
@@ -106,20 +113,18 @@ export default class PageOne extends Component {
           <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
         </Nav>
         <Container>
-        <div id="test">
+        <div style={{fontSize:"7rem"}}id="test">
             W.J.SCHRATT
           <Row>
             <h2 className="device">Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
           </Row>
-          <Row id="slideSource" className="slideSource">
-            <h1 className="slideSource"></h1>
+          <Row>
+            <Col><h4 style={{fontSize:"5rem"}} className="cute">Responsive Accessible Code</h4></Col>
+            <p className="swing" style={{fontSize:"3rem",
+                                        color:"white", }}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
           <Row>
-            <Col><h4 className="cute">Responsive Accessible Code</h4></Col>
-            <p className="swing">JavaScript, React, Html, Css, and Java are my game</p>
-          </Row>
-          <Row>
-          <p id="black">To view my projects click on the toggle menu on the top left</p>
+          <p id="black" style={{fontSize:"2rem"}}>To view my projects click on the toggle menu on the top left</p>
           </Row>
           <Row>
           {this.state.position}
@@ -144,20 +149,22 @@ export default class PageOne extends Component {
                         textalign:"center",
                          }}>
             <h3 className="center" style={{textalign:"center",
-                                           fontSize:"3rem",
+                                           fontSize:"8rem",
                                                             }}>
             WJSchratt
             </h3>
             <Row>
               <h2 style={{ color:"white",
-                            fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
             </Row>
             <Row>
-              <Col><h4 style={{ fontSize:"1.5rem",}}className="cute">Responsive Accessible Code</h4></Col>
-              <p className="swing">JavaScript, React, Html, Css, and Java are my game</p>
+              <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">Responsive Accessible Code</h4></Col>
+              <p className="swing" style={{ fontSize:"4rem",
+                                            color:"white",
+                                            display:"none"}}>JavaScript, React, Html, Css, and Java are my game</p>
             </Row>
             <Row>
-            <p id="black">To view my projects click on the toggle menu on the top left</p>
+            <p id="black" style={{ fontSize:"2rem",}}>To view my projects click on the toggle menu on the top left</p>
             </Row>
             <Row>
             {this.state.position}
@@ -175,7 +182,7 @@ export default class PageOne extends Component {
         </Nav>
         <Container>
         <div style={{ position:"absolute",
-                      top: "30%",
+                      top: "20%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
                       fontSize:"2rem",
@@ -191,18 +198,17 @@ export default class PageOne extends Component {
                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
           </Row>
           <Row>
-            <Col><h4 style={{ fontSize:"1.5rem",}}className="cute">Responsive Accessible Code</h4></Col>
+            <Col><h4 style={{ fontSize:"1.5rem",
+                              textalign:"center"}}className="cute">Responsive Accessible Code</h4></Col>
             <p className="swing">JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
-          <Row>
-          <p id="black">To view my projects click on the toggle menu on the top left</p>
-          </Row>
+
           <Row>
           {this.state.position}
           </Row>
           </div>
-      </Container>
-        </div>
+          </Container>
+          </div>
         </Mobile>
 
         </div>

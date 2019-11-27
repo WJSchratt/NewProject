@@ -13,9 +13,7 @@
   font-size: 5vh !important ;
   color: white !important ;
 }
-.center{
-  text-align: center;
-}
+
 
 .cute {
  font-size: 4rem;
@@ -56,7 +54,7 @@ a :hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    text-align: center !important;
+      text-align: center;
     z-index:0;
 }
 #black{
@@ -67,6 +65,7 @@ a :hover {
 
 .center{
   text-align: center !important;
+  font-size: 10rem;
 }
 .slideSource{
   font-size: 100px !important;

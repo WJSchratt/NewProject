@@ -454,7 +454,7 @@ handleResize = (event) => {
 
 
             <Mobile>
-            <h1>hello</h1>
+            <h1 style={{display:"none"}}>hello</h1>
             </Mobile>
           </div>
         );
