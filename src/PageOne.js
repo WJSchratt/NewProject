@@ -159,7 +159,7 @@ export default class PageOne extends Component {
             </h3>
             <Row>
               <h2 style={{ color:"white",
-                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
             </Row>
             <Row>
               <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">I Create Responsive Accessible Code</h4></Col>
@@ -193,18 +193,18 @@ export default class PageOne extends Component {
                       textalign:"center",
                        }}>
           <h3 className="center" style={{textalign:"center",
-                                         fontSize:"4rem",
+                                         fontSize:"2rem",
                                                           }}>
           WJSchratt
           </h3>
           <Row>
             <h2 className="cute"style={{ color:"white",
-                          fontSize:"2.8rem",}} >Welcome {this.state.device} user your View-Width is {this.state.windowWith}</h2>
+                          fontSize:"1.2rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
           </Row>
           <Row>
-            <Col><h4 style={{ fontSize:"2.5rem",
+            <Col><h4 style={{ fontSize:"1.4rem",
                               textalign:"center !important"}}>I Create Responsive Accessible Code</h4></Col>
-            <p className="swing" style={{ fontSize:"3rem",
+            <p className="swing" style={{ fontSize:"1rem",
                                 textalign:"center !important"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
