@@ -62,18 +62,15 @@ this.handleResize = this.handleResize.bind(this)
 
     handlePosition = (event) => {
     this.setState({ position: window.scrollY });
-    if (this.state.position > 10){
+    if (this.state.position > 70){
       $(".swing").slideDown("slow")
-      setTimeout(
-            function() {
-              $("#black").slideDown("slow")
-              $(".cute").slideDown("slow")
-            }
-            .bind(this),
-            800
-        )
     }
-
+    if (this.state.position > 90){
+      $(".cute").slideDown("slow")
+      $("#black").slideDown("slow")
+      $("#position").slideDown("slow")
+      $("#scroll").slideDown("slow")
+    }
   }
 
     componentDidMount() {
@@ -96,8 +93,7 @@ this.handleResize = this.handleResize.bind(this)
         this.timer.push(
         setTimeout(
               function() {
-                $(".cute").slideDown("fast")
-                console.log("hey")
+                $(".cute").slideDown("slow")
               }
               .bind(this),
               1000
@@ -116,24 +112,39 @@ this.handleResize = this.handleResize.bind(this)
           <Nav.Link href="mailto:john.schratt1@gmail.com" eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
           <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
         </Nav>
+        <Container className="right-postion">
+          <h1 className="right-postion" style={{position: "fixed",
+                                                right:"5%",
+                                                top:"40%",
+                                                fontSize:"2rem",
+                                                textalign:"center"
+
+          }}>
+           Scroll position is {this.state.position}
+          </h1>
+        </Container>
         <Container>
-        <div style={{fontSize:"7rem"}}id="test">
+        <div style={{fontSize:"8rem"}}id="test">
             W.J.SCHRATT
           <Row>
-            <h2 className="device">Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
+            <Col>
+            <h2 style={{textalign:"center"}} className="device">Welcome {this.state.device} user</h2><h2  style={{color:"#212529",fontSize:"2rem",textalign:"center",}}>{this.state.windowWith}</h2>
+            </Col>
+          </Row>
+          <Row>
           </Row>
           <Row>
             <Col><h4 style={{fontSize:"4rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-            <p className="swing" style={{fontSize:"3rem",
-                                        color:"white", }}>JavaScript, React, Html, Css, and Java are my game</p>
+              <p className="swing" style={{fontSize:"2.5rem",
+                                        color:"white",
+                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
           <Row>
-          <p id="black" style={{fontSize:"2rem",
-                                color:"#212529"}}>To view my projects click on the toggle menu on the top left</p>
+            <p id="black" className="centered" style={{fontSize:"1.5rem",
+                                color:"#212529",
+                                textalign:"center"}}>To view my projects click on the toggle menu on the top left</p>
           </Row>
-          <Row>
-          {this.state.position}
-          </Row>
+
           </div>
         </Container>
           </div>
@@ -165,7 +176,6 @@ this.handleResize = this.handleResize.bind(this)
             <Row>
               <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">I Create Responsive Accessible Code</h4></Col>
               <p className="swing" style={{ fontSize:"4rem",
-                                            color:"white",
                                             display:"none"}}>JavaScript, React, Html, Css, and Java are my game</p>
             </Row>
             <Row>
@@ -199,7 +209,7 @@ this.handleResize = this.handleResize.bind(this)
           WJSchratt
           </h3>
           <Row>
-            <h2 className="cute"style={{ color:"white",
+            <h2 className="cute"style={{ color:"#990000",
                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
           </Row>
           <Row>
@@ -207,7 +217,7 @@ this.handleResize = this.handleResize.bind(this)
                               textalign:"center"}}>I Create Responsive Accessible Code</h4></Col>
             <p className="swing" style={{ fontSize:"1.2rem",
                                           textalign:"center !important",
-                                          color:"white"}}>JavaScript, React, Html, Css, and Java are my game</p>
+                                          color:"red"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
 
           <Row>
