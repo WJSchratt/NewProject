@@ -51,7 +51,7 @@ this.handleResize = this.handleResize.bind(this)
         this.setState({device:"Mobile"})
 
       }
-      else if(this.state.windowWith < 1600) {
+      else if(this.state.windowWith < 1500) {
         this.setState({device:"Computer"})
       }
 
@@ -114,7 +114,7 @@ this.handleResize = this.handleResize.bind(this)
           <h1 className="right-postion" style={{position: "fixed",
                                                 right:"1%",
                                                 top:"25%",
-                                                fontSize:"2rem",
+                                                fontSize:"1.5rem",
                                                 textalign:"center"
 
           }}>

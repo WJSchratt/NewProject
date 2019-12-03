@@ -152,7 +152,7 @@ h4{
 
 
 .type {
-  border-right: solid 3px rgba(0,255,0,.75);
+  border-right: solid 3px white;
   white-space: nowrap;
   overflow: hidden;
   font-family: 'Source Code Pro', monospace;
@@ -166,7 +166,7 @@ h4{
 
 .type {
   animation: animated-text 4s steps(65,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
+             animated-cursor 600ms steps(29,end) 5s;
 }
 
 
@@ -179,12 +179,12 @@ h4{
 
 
 @keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
+  from{border-right-color: white;}
   to{border-right-color: transparent;}
 }
 
 .type1 {
-  border-right: solid 3px rgba(0,255,0,.75);
+  border-right: solid 3px white;
   white-space: nowrap;
   overflow: hidden;
   font-family: 'Source Code Pro', monospace;
@@ -198,10 +198,10 @@ h4{
 
 .type1 {
   animation: animated-text 4s steps(65,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
+             animated-cursor 600ms steps(29,end) 5s;
 }
 .type2 {
-  border-right: solid 3px rgba(0,255,0,.75);
+  border-right: solid 3px white;
   white-space: nowrap;
   overflow: hidden;
   font-family: 'Source Code Pro', monospace;
@@ -211,7 +211,9 @@ h4{
   max-width: 100%;
   display:none;
 }
-
+.show{
+  display: block;
+}
 
 .type2 {
   animation: animated-text 4s steps(65,end) 1s 1 normal both,

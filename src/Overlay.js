@@ -12,11 +12,11 @@ import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 import { useMediaQuery } from 'react-responsive'
 
 const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 992 })
+  const isDesktop = useMediaQuery({ minWidth: 1251 })
   return isDesktop ? children : null
 }
 const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1250 })
   return isTablet ? children : null
 }
 const Mobile = ({ children }) => {
@@ -396,16 +396,17 @@ handleResize = (event) => {
                             <Fade bottom opposite collapse when={this.state.show7}>
                               <a href="https://jams-react.netlify.com/" >
                                 <h1>Music Player</h1>
-                                
+
                               </a>
                             </Fade>
                           </Col>
+                          </Row>
+                          <Row>
                           <Col>
                             <Fade bottom opposite collapse when={this.state.show7}>
                               <a href="https://chatt-app.netlify.com/" >
                                 <h1>Chat-Application
                                 </h1>
-
                               </a>
                             </Fade>
                           </Col>
@@ -413,18 +414,19 @@ handleResize = (event) => {
                         <Row>
                           <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="https://beas-wed.netlify.com/" >
-                                <h1>Website</h1>
-
+                                  <h1>Website</h1>
                                 </a>
-                              </Fade>
+                                </Fade>
                             </Col>
+                        </Row>
+                        <Row>
                             <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="https://shirt-demo.netlify.com/" >
                                 <h1>Demo for client</h1>
                                 </a>
                               </Fade>
                             </Col>
-                          </Row>
+                        </Row>
                         </div>
                       </Container>
                     </div>
