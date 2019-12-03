@@ -62,14 +62,20 @@ this.handleResize = this.handleResize.bind(this)
 
     handlePosition = (event) => {
     this.setState({ position: window.scrollY });
-    if (this.state.position > 70){
-      $(".swing").slideDown("slow")
-    }
+
     if (this.state.position > 90){
+      $(".swing").slideDown("slow")
       $(".cute").slideDown("slow")
       $("#black").slideDown("slow")
       $("#position").slideDown("slow")
       $("#scroll").slideDown("slow")
+      setTimeout(
+            function() {
+              $(".device").slideDown("slow")
+            }
+            .bind(this),
+            500
+        )
     }
   }
 
@@ -79,6 +85,7 @@ this.handleResize = this.handleResize.bind(this)
       window.addEventListener('resize', this.handleResize);
       document.addEventListener('click', this.fade);
       this.handleResize();
+
     }
 
     componentDidUnmount() {
@@ -88,16 +95,7 @@ this.handleResize = this.handleResize.bind(this)
 
     fade = () => {
       var slideSource = document.getElementById('slideSource');
-      this.timer = [];
       document.removeEventListener('click', this.fade);
-        this.timer.push(
-        setTimeout(
-              function() {
-                $(".cute").slideDown("slow")
-              }
-              .bind(this),
-              1000
-          ))
 
     }
 
@@ -128,15 +126,16 @@ this.handleResize = this.handleResize.bind(this)
             W.J.SCHRATT
           <Row>
             <Col>
-            <h2 style={{textalign:"center"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span  style={{color:"#212529",fontSize:"2rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
+            <h2 style={{textalign:"center"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span style={{color:"#212529",fontSize:"2rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
           </Col>
         </Row>
-
-          <Row>
+          <Row className="introduction">
             <Col><h4 style={{fontSize:"4rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-              <p className="swing" style={{fontSize:"2.5rem",
+            <Col>
+              <p className="swing" style={{fontSize:"3rem",
                                         color:"white",
                                         textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
+            </Col>
           </Row>
           <Row>
             <p id="black" className="centered" style={{fontSize:"1.5rem",
@@ -175,11 +174,11 @@ this.handleResize = this.handleResize.bind(this)
           </Col>
         </Row>
 
-          <Row>
+          <Row className="introduction">
             <Col><h4 style={{fontSize:"2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-              <p className="swing" style={{fontSize:"2rem",
+            <Col><p className="swing" style={{fontSize:"2rem",
                                         color:"white",
-                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
+                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p></Col>
           </Row>
           <Row>
             <p id="black" className="centered" style={{fontSize:"1.5rem",
@@ -217,15 +216,15 @@ this.handleResize = this.handleResize.bind(this)
             <h2 style={{textalign:"center", fontSize:"1rem"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span  style={{color:"#212529",fontSize:"1rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
           </Col>
         </Row>
-
-          <Row>
+          <Row className="introduction">
             <Col><h4 style={{fontSize:"1.2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-              <p className="swing" style={{fontSize:"1.3rem",
+              <Col><p className="swing" style={{fontSize:"1.3rem",
                                         color:"white",
-                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
+                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p></Col>
           </Row>
           <Row>
-            <p id="black" className="centered" style={{fontSize:"1rem",
+            <p id="black" className="centered" style={{
+                                fontSize:"1rem",
                                 color:"#212529",
                                 textalign:"center"}}>To view my projects click on the toggle menu on the top left</p>
           </Row>

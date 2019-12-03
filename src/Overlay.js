@@ -396,7 +396,7 @@ handleResize = (event) => {
                             <Fade bottom opposite collapse when={this.state.show7}>
                               <a href="https://jams-react.netlify.com/" >
                                 <h1>Music Player</h1>
-                                <Image alt="an image of a the website jams" className="projects" src={Project1}fluid />
+                                
                               </a>
                             </Fade>
                           </Col>
@@ -405,7 +405,7 @@ handleResize = (event) => {
                               <a href="https://chatt-app.netlify.com/" >
                                 <h1>Chat-Application
                                 </h1>
-                                <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
+
                               </a>
                             </Fade>
                           </Col>
@@ -414,14 +414,13 @@ handleResize = (event) => {
                           <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="https://beas-wed.netlify.com/" >
                                 <h1>Website</h1>
-                                <Image alt="an image of a the website chat-application" className="projects" src={Project3}fluid />
+
                                 </a>
                               </Fade>
                             </Col>
                             <Col><Fade bottom opposite collapse when={this.state.show7}>
                                 <a href="https://shirt-demo.netlify.com/" >
                                 <h1>Demo for client</h1>
-                                <Image className="pic" alt="an image of a the website chat-application" className="projects" src={Project4}fluid />
                                 </a>
                               </Fade>
                             </Col>
@@ -454,7 +453,7 @@ handleResize = (event) => {
 
 
             <Mobile>
-            <h1 style={{display:"none"}}>hello</h1>
+            <h1 style={{display:"none"}}>I hope you dont find this in my code, but if you do, just know this was the only way i figured out howto do it</h1>
             </Mobile>
           </div>
         );
