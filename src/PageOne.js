@@ -16,11 +16,11 @@ import Project1 from "./pics/Screen Shot 2019-11-18 at 3.08.40 PM.png";
 import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 
 const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1400 })
+  const isDesktop = useMediaQuery({ minWidth: 1200 })
   return isDesktop ? children : null
 }
 const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1400 })
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1200 })
   return isTablet ? children : null
 }
 const Mobile = ({ children }) => {
@@ -114,13 +114,13 @@ this.handleResize = this.handleResize.bind(this)
         </Nav>
         <Container className="right-postion">
           <h1 className="right-postion" style={{position: "fixed",
-                                                right:"5%",
-                                                top:"40%",
+                                                right:"1%",
+                                                top:"25%",
                                                 fontSize:"2rem",
                                                 textalign:"center"
 
           }}>
-           Scroll position is {this.state.position}
+           Scroll position is <span style={{color: "white",}}>{this.state.position}</span>
           </h1>
         </Container>
         <Container>
@@ -128,11 +128,10 @@ this.handleResize = this.handleResize.bind(this)
             W.J.SCHRATT
           <Row>
             <Col>
-            <h2 style={{textalign:"center"}} className="device">Welcome {this.state.device} user</h2><h2  style={{color:"#212529",fontSize:"2rem",textalign:"center",}}>{this.state.windowWith}</h2>
-            </Col>
-          </Row>
-          <Row>
-          </Row>
+            <h2 style={{textalign:"center"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span  style={{color:"#212529",fontSize:"2rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
+          </Col>
+        </Row>
+
           <Row>
             <Col><h4 style={{fontSize:"4rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
               <p className="swing" style={{fontSize:"2.5rem",
@@ -150,44 +149,48 @@ this.handleResize = this.handleResize.bind(this)
           </div>
         </Desktop>
         <Tablet>
-          <div className="page1">
-          <Nav defaultActiveKey="/home" id="nav" className="flex-column">
-            <Nav.Link href="https://github.com/WJSchratt"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
-            <Nav.Link href="mailto:john.schratt1@gmail.com" eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
-          </Nav>
-          <Container>
-          <div style={{ position:"absolute",
-                        top: "30%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        fontSize:"2rem",
-                        textalign:"center",
-                         }}>
-            <h3 className="center" style={{textalign:"center",
-                                           fontSize:"8rem",
-                                                            }}>
-            WJSchratt
-            </h3>
-            <Row>
-              <h2 style={{ color:"white",
-                           fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
-            </Row>
-            <Row>
-              <Col><h4 style={{ fontSize:"3.5rem",}}className="swing">I Create Responsive Accessible Code</h4></Col>
-              <p className="swing" style={{ fontSize:"4rem",
-                                            display:"none"}}>JavaScript, React, Html, Css, and Java are my game</p>
-            </Row>
-            <Row>
-            <p id="black" style={{ fontSize:"2rem",}}>To view my projects click on the toggle menu on the top left</p>
-            </Row>
-            <Row>
-            {this.state.position}
-            </Row>
-            </div>
+        <div className="page1">
+        <Nav defaultActiveKey="/home" id="nav" className="flex-column">
+          <Nav.Link href="https://github.com/WJSchratt"><Image className="sidebar" alt="image of the github logo" src={Git} roundedCircle /></Nav.Link>
+          <Nav.Link href="mailto:john.schratt1@gmail.com" eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
+          <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
+        </Nav>
+        <Container className="right-postion">
+          <h1 className="right-postion" style={{position: "fixed",
+                                                right:"2%",
+                                                top:"25%",
+                                                fontSize:"1.2rem",
+                                                textalign:"center"
+
+          }}>
+           Scroll position is <span style={{color: "white",}}>{this.state.position}</span>
+          </h1>
+        </Container>
+        <Container>
+        <div style={{fontSize:"5rem"}}id="test">
+            W.J.SCHRATT
+          <Row>
+            <Col>
+            <h2 style={{textalign:"center", fontSize:"1.5rem"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span  style={{color:"#212529",fontSize:"1.5rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
+          </Col>
+        </Row>
+
+          <Row>
+            <Col><h4 style={{fontSize:"2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
+              <p className="swing" style={{fontSize:"2rem",
+                                        color:"white",
+                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
+          </Row>
+          <Row>
+            <p id="black" className="centered" style={{fontSize:"1.5rem",
+                                color:"#212529",
+                                textalign:"center"}}>To view my projects click on the toggle menu on the top left</p>
+          </Row>
+
+          </div>
         </Container>
           </div>
-        </Tablet>
+          </Tablet>
         <Mobile>
         <div className="page1">
         <Nav defaultActiveKey="/home" id="nav" className="flex-column">
@@ -195,36 +198,40 @@ this.handleResize = this.handleResize.bind(this)
           <Nav.Link href="mailto:john.schratt1@gmail.com" eventKey="link-1"><Image className="sidebar" alt="logo of mail" src={Mail} /></Nav.Link>
           <Nav.Link href="https://www.linkedin.com/in/walter-schratt/" eventKey="link-2"><Image className="sidebar" alt="image of the LinkedIn logo" src={LinkIn} /></Nav.Link>
         </Nav>
+        <Container className="right-postion">
+          <h1 className="right-postion" style={{position: "fixed",
+                                                right:"1%",
+                                                top:"25%",
+                                                fontSize:"1rem",
+                                                textalign:"center"
+
+          }}>
+           Scroll position is <span style={{color: "white",}}>{this.state.position}</span>
+          </h1>
+        </Container>
         <Container>
-        <div style={{ position:"absolute",
-                      top: "30%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      fontSize:"2rem",
-                      textalign:"center",
-                       }}>
-          <h3 className="center" style={{textalign:"center",
-                                         fontSize:"2.5rem",
-                                                          }}>
-          WJSchratt
-          </h3>
+        <div style={{fontSize:"2rem"}}id="test">
+            W.J.SCHRATT
           <Row>
-            <h2 className="cute"style={{ color:"#990000",
-                          fontSize:"1.5rem",}} >Welcome {this.state.device} user your View-Width is <span style={{color:"#212529"}}>{this.state.windowWith}</span></h2>
-          </Row>
-          <Row>
-            <Col><h4 classname="wow" style={{ fontSize:"1.7rem",
-                              textalign:"center"}}>I Create Responsive Accessible Code</h4></Col>
-            <p className="swing" style={{ fontSize:"1.2rem",
-                                          textalign:"center !important",
-                                          color:"red"}}>JavaScript, React, Html, Css, and Java are my game</p>
-          </Row>
+            <Col>
+            <h2 style={{textalign:"center", fontSize:"1rem"}} className="device">Welcome {this.state.device} User Your Viewwidth is <span  style={{color:"#212529",fontSize:"1rem",textalign:"center",}}>{this.state.windowWith}</span></h2>
+          </Col>
+        </Row>
 
           <Row>
-          {this.state.position}
+            <Col><h4 style={{fontSize:"1.2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
+              <p className="swing" style={{fontSize:"1.3rem",
+                                        color:"white",
+                                        textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p>
           </Row>
+          <Row>
+            <p id="black" className="centered" style={{fontSize:"1rem",
+                                color:"#212529",
+                                textalign:"center"}}>To view my projects click on the toggle menu on the top left</p>
+          </Row>
+
           </div>
-          </Container>
+        </Container>
           </div>
         </Mobile>
 
