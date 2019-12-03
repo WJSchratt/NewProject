@@ -176,7 +176,7 @@ this.handleResize = this.handleResize.bind(this)
 
           <Row className="introduction">
             <Col><h4 style={{fontSize:"2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-            <Col><p className="swing" style={{fontSize:"2rem",
+            <Col><p className="swing" style={{fontSize:"1.5rem",
                                         color:"white",
                                         textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p></Col>
           </Row>
@@ -218,7 +218,7 @@ this.handleResize = this.handleResize.bind(this)
         </Row>
           <Row className="introduction">
             <Col><h4 style={{fontSize:"1.2rem"}} className="cute">I create Responsive Accessible Code</h4></Col>
-              <Col><p className="swing" style={{fontSize:"1.3rem",
+              <Col><p className="swing" style={{fontSize:"1.1rem",
                                         color:"white",
                                         textalign:"left"}}>JavaScript, React, Html, Css, and Java are my game</p></Col>
           </Row>

@@ -119,7 +119,7 @@ export default class PageOne extends Component {
                   </Row>
                   <Row>
                     <Col>
-                      <h2 style={{fontSize:"0.75rem"}} className="type2">Git, GitHub, task management websites, fluent in German...</h2>
+                      <h2 style={{fontSize:"0.75rem"}} className="type2">Git, GitHub, task management websites...</h2>
                     </Col>
                     <Col>
                     </Col>
