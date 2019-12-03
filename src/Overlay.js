@@ -12,11 +12,11 @@ import Project4 from "./pics/Screen Shot 2019-11-19 at 1.59.56 PM 2.png"
 import { useMediaQuery } from 'react-responsive'
 
 const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1251 })
+  const isDesktop = useMediaQuery({ minWidth: 1300 })
   return isDesktop ? children : null
 }
 const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1250 })
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1299 })
   return isTablet ? children : null
 }
 const Mobile = ({ children }) => {
