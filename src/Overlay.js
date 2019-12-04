@@ -306,15 +306,19 @@ handleResize = (event) => {
                   </Container>
                 </div>
               </div>
-                <Fade top opposite collapse when={this.state.show}>
+
                   <a
-                      style={{cursor:"pointer"}}
+                      style={{cursor:"pointer",
+                              fontSize:"6rem",
+                              margintop:"1%",
+                              marginleft:"20%",
+                              left:"1%",}}
                       className = "closebtn"
                       onClick   = {this.closeNav}
                   >
                       ×
                   </a>
-                  </Fade>
+
                 <div className = "list-group">
 
                   </div>
