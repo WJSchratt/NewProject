@@ -149,8 +149,6 @@ h4{
 
 
 .type {
-  border-right: solid 3px white;
-  white-space: nowrap;
   overflow: hidden;
   font-family: 'Source Code Pro', monospace;
   font-size: 2rem;

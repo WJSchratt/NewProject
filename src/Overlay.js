@@ -200,9 +200,6 @@ handleResize = (event) => {
 
   }
 
-
-
-
   render() {
       return (
         <div>
