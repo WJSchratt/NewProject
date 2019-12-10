@@ -374,7 +374,7 @@ handleResize = (event) => {
                         <Row>
                           <Col>
                             <Fade top opposite collapse when={this.state.show4}>
-                              <p className="white">Ux designer</p>
+                              <p className="white">Back-End Engineer</p>
                             </Fade>
                           </Col>
                         </Row>
