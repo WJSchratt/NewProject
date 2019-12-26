@@ -246,7 +246,7 @@ handleResize = (event) => {
                     <Row>
                       <Col>
                         <Fade top opposite collapse when={this.state.show4}>
-                          <p className="white">Ux designer</p>
+                          <p className="white">Back-End Engineer</p>
                         </Fade>
                       </Col>
                     </Row>
@@ -452,9 +452,6 @@ handleResize = (event) => {
 
                 </div>
             </Tablet>
-
-
-
             <Mobile>
             <h1 style={{display:"none"}}>I hope you dont find this in my code, but if you do, just know this was the only way i figured out howto do it</h1>
             </Mobile>
