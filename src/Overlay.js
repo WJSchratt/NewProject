@@ -276,8 +276,7 @@ handleResize = (event) => {
                       <Col>
                         <Fade bottom opposite collapse when={this.state.show7}>
                           <a href="https://chatt-app.netlify.com/" >
-                            <h1>Chat-Application
-                            </h1>
+                            <h1>Chat-Application</h1>
                             <Image alt="an image of a the website chat-application" className="projects" src={Project2}fluid />
                           </a>
                         </Fade>
